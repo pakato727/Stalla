@@ -39,9 +39,6 @@ public class GestoreStalla {
 
 
 	void leggiAnimale(int id) {
-		//System.out.println("Inserisci ID animale da visualizzare: ");
-		//		id = Integer.parseInt(input.nextLine());
-
 		for(int i=0; i<stalla.length; i++) {
 			String[] campi = stalla[i].split(";");
 			int idCorrente = Integer.parseInt(campi[0]);
