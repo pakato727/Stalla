@@ -7,7 +7,9 @@ public class Avvio {
 		System.out.println("********MENU********");
 		System.out.println("1 - Aggiungi animale ");
 		System.out.println("2 - Visualizza singolo animale ");
-		System.out.println("3 - Esci.");
+		System.out.println("3 - Visualizza animali ");
+		System.out.println("4 - Rimuovi animale ");
+		System.out.println("5 - Esci.");
 		System.out.println("********************");
 		
 		GestoreStalla stalla = new GestoreStalla();
@@ -33,8 +35,19 @@ public class Avvio {
 				System.out.println("Premi un tasto per continuare: ");
 				input.nextLine();
 				break;
-			
 			case 3:
+				stalla.leggiAnimali();
+				System.out.println("Premi un tasto per continuare: ");
+				input.nextLine();
+				break;
+			case 4:
+				System.out.println("Inserisci ID animale da eliminare: ");
+				int idScelto= Integer.parseInt(input.nextLine());
+				stalla.rimuoviAnimale(idScelto);
+				System.out.println("Premi un tasto per continuare: ");
+				input.nextLine();
+				break;
+			case 5:
 				System.out.println("Grazie e arrivederci!");
 				break;
 			}

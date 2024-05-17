@@ -34,8 +34,6 @@ public class GestoreStalla {
 			System.out.println("Stalla satura! Non è possibile aggiungere animali");
 		}
 
-
-
 	}
 
 
@@ -62,8 +60,44 @@ public class GestoreStalla {
 				System.out.println("ID non esistente");
 
 			}
-
 		}
+	}
+
+	void leggiAnimali() {
+		for(int i=0; i<stalla.length; i++) {
+			if(stalla[i]!=null) {
+
+				String[] campi = stalla[i].split(";");
+
+				System.out.println("**SCHEDA ANIMALE**");
+				System.out.println("ID: "+ campi[0]);
+				System.out.println("Tipo di animale: "+campi[1]);
+				System.out.println("Provenienza: "+campi[2]);
+				System.out.println("Alimentazione: "+campi[3]);
+				System.out.println("Valore: "+campi[4]);
+				System.out.println("*******");
+			}
+		}
+	}
+
+	void rimuoviAnimale(int idScelto) {
+		boolean trovato = false;
+		for (int i = 0; i < stalla.length; i++) {
+			if (stalla[i] != null) {
+				String[] campi = stalla[i].split(";");
+				int idCorrente = Integer.parseInt(campi[0]);
+				if (idCorrente == idScelto) {
+					stalla[i] = null;
+					trovato = true;
+					System.out.println("Animale rimosso dalla cella " + i);	                	                
+					break;
+				}
+			}
+		}
+		if (!trovato) {
+			System.out.println("Animale con ID " + idScelto + " non trovato.");
+		}
+
 
 
 
@@ -73,5 +107,5 @@ public class GestoreStalla {
 
 	}
 
-	
+
 }
