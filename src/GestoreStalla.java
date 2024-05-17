@@ -7,7 +7,6 @@ public class GestoreStalla {
 	void aggiungiAnimali() {
 		boolean flag=true;
 
-
 		for(int i=0; i<stalla.length; i++) {
 			if(stalla[i] == null){
 				System.out.println("Inserisci ID: ");
@@ -25,17 +24,10 @@ public class GestoreStalla {
 				flag=false;
 				break;
 			}
-
 		}
-
-
-
 		if(flag) {
 			System.out.println("Stalla satura! Non è possibile aggiungere animali");
 		}
-
-
-
 	}
 
 
@@ -45,8 +37,10 @@ public class GestoreStalla {
 		//		id = Integer.parseInt(input.nextLine());
 
 		for(int i=0; i<stalla.length; i++) {
+			
 			String[] campi = stalla[i].split(";");
 			int idCorrente = Integer.parseInt(campi[0]);
+			
 			if(id == idCorrente) {
 				System.out.println("**SCHEDA ANIMALE**");
 				System.out.println("ID: "+ campi[0]);
@@ -56,21 +50,11 @@ public class GestoreStalla {
 				System.out.println("Valore: "+campi[4]);
 				System.out.println("*******");
 				break;
-
 			}
 			else {
 				System.out.println("ID non esistente");
-
 			}
-
 		}
-
-
-
-
-
-
-
 	}
 
 	
