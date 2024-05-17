@@ -27,7 +27,6 @@ public class Avvio {
 				System.out.println("Premi un tasto per continuare: ");
 				input.nextLine();
 				break;
-				
 			case 2:
 				System.out.println("Inserisci ID animale da visualizzare: ");
 				int id = Integer.parseInt(input.nextLine());
